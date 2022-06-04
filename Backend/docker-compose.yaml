@@ -1,0 +1,17 @@
+version: '3'
+services:
+  backend:
+    image: 'ghcr.io/int-365-project/backend:latest'
+    container_name: backend
+    restart: on-failure
+    ports:
+      - '8081:8081'
+    networks:
+      int365:
+        ipv4_address: 172.99.99.2
+networks:
+  default:
+    external:
+      name: int365
+  int365:
+    external: true
