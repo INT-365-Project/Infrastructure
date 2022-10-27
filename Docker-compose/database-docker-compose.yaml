@@ -5,6 +5,7 @@ services:
     container_name: database
     restart: on-failure
     environment:
+      LANG: en_US.UTF-8
       MYSQL_PORT: 3306
       MYSQL_ROOT_PASSWORD: 1234
     ports:
